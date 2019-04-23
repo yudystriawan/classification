@@ -26,15 +26,11 @@ public class Classification extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        JSONObject jsono = new JSONObject();
         String isi = "mohon di tindak mobil yang parkir di pinggir jalan yang ada di jalanan ayani banjar tek tek karena mengganggu pengguna jalan lain";
         PrintWriter pw = resp.getWriter();
         Preprocessing p = new Preprocessing(isi);
         Model m = new Model();
-//        jsono.put("isi", p.result());
         JSONObject jsono = m.process(isi);
-        
-//        pw.write(m.modelPath.toString());
         pw.write(jsono.toString());
     }
 
