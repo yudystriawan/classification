@@ -21,7 +21,24 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.andylibrian.jsastrawi</groupId>
+            <artifactId>jsastrawi</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>nz.ac.waikato.cms.weka</groupId>
+            <artifactId>weka-stable</artifactId>
+            <version>3.8.3</version>
+        </dependency>
     </dependencies>
+    
+    
 
     <build>
         <plugins>
@@ -71,6 +88,12 @@
                 </executions>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
 
 </project>
